@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include "cdnlines.html" %}
+    <style media="screen">
+      input{
+        margin-top:10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 class="display-4 text-center bg-success">NTH Student Info</h1>
+    <div class='container'>
+      <div class='row'>
+        <div class='offset-md-4 col-md-4'>
+          <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="fname" class='form-control' placeholder='first_name'>
+
+            <input type="text" name="lname" class='form-control' placeholder='last_name'>
+
+            <input type="text" name="course" class='form-control' placeholder='course'>
+
+            <input type="number" name="fee" class='form-control' placeholder='fee'>
+
+            <input type="number" name="assignment1" class='form-control' placeholder='assignment1'>
+
+            <input type="number" name="assignment2" class='form-control' placeholder='assignment2'>
+
+            <input type="number" name="assignment3" class='form-control' placeholder='assignment3'>
+
+            <input type="number" name="assignment4" class='form-control' placeholder='assignment4'>
+
+            <input type="text" name="institute" class='form-control' placeholder='institute'>
+
+            <input type="text" name="location" class='form-control' placeholder='location'>
+            <center>
+            <input type="submit"  value="create" class='btn btn-success btn-sm'>
+            <input type="reset"  value="clear" class='btn btn-danger btn-sm'><br><br>
+            <a href="{% url 'homepage' %}" class='btn btn-info btn-sm'>Return to main page</a>
+            </center>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
